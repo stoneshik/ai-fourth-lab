@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="394af1ff-9398-4b38-ac1e-61aea8051f3e" name="Changes" comment="Добавил круглую диаграмму" />
+    <list default="true" id="394af1ff-9398-4b38-ac1e-61aea8051f3e" name="Changes" comment="мелкие правки" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +87,7 @@
       <workItem from="1705175863407" duration="5043000" />
       <workItem from="1705224616943" duration="17965000" />
       <workItem from="1705244447659" duration="23000" />
-      <workItem from="1705251749406" duration="2571000" />
+      <workItem from="1705251749406" duration="2890000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -161,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705254494279</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="мелкие правки">
+      <option name="closed" value="true" />
+      <created>1705254812886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705254812886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,9 +185,10 @@
     <MESSAGE value="готовая лаба" />
     <MESSAGE value="Добавил гистограммы" />
     <MESSAGE value="Добавил круглую диаграмму" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил круглую диаграмму" />
+    <MESSAGE value="мелкие правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="мелкие правки" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fourthLab$main.coverage" NAME="main Coverage Results" MODIFIED="1705254437973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fourthLab$main.coverage" NAME="main Coverage Results" MODIFIED="1705254783927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
