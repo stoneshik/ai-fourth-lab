@@ -77,8 +77,8 @@ class VisualizeData:
         print()
 
 
-def task(task_class, normalized_data):
-    task_obj = task_class(normalized_data)
+def task(task_class, normalized_test_data, normalized_train_data):
+    task_obj = task_class(normalized_test_data, normalized_train_data)
     print("==============================================================")
     print(task_obj.name_model)
     find_best = task_obj.find_best()
@@ -98,10 +98,15 @@ def task(task_class, normalized_data):
 def main():
     data = pd.read_csv('Student_Performance.csv')
     VisualizeData.visualize_info_dataset(data)
-    normalized_data = NormalizeData.normalize_data(data)
-    task(FirstModel, normalized_data)
-    task(SecondModel, normalized_data)
-    task(ThirdModel, normalized_data)
+
+    train = data.sample(frac=0.8, random_state=0)
+    test = data.drop(train.index)
+    normalized_train_data = NormalizeData.normalize_data(train)
+    normalized_test_data = NormalizeData.normalize_data(test)
+
+    task(FirstModel, normalized_train_data, normalized_test_data)
+    task(SecondModel, normalized_train_data, normalized_test_data)
+    task(ThirdModel, normalized_train_data, normalized_test_data)
 
 
 if __name__ == '__main__':
