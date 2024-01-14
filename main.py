@@ -48,8 +48,8 @@ class VisualizeData:
         plt.show()
 
     @classmethod
-    def __visualize_info_column_activities(cls, column, name_column):
-        print(f"Информация о столбце №3: {name_column}")
+    def __visualize_info_column_activities(cls, column, num_column, name_column):
+        print(f"Информация о столбце №{num_column}: {name_column}")
         print("Значения принимают либо \"Yes\" либо \"No\"\n")
         bool_count_yes = (column == 'Yes')
         bool_count_no = (column == 'No')
@@ -70,7 +70,7 @@ class VisualizeData:
         print(f"Количество столбцов: {num_columns}\n")
         cls.__visualize_info_column(data.iloc[:, 0], 1, "Часы обучения")
         cls.__visualize_info_column(data.iloc[:, 1], 2, "Предыдущая оценка")
-        cls.__visualize_info_column_activities(data.iloc[:, 2], "Дополнительная активность")
+        cls.__visualize_info_column_activities(data.iloc[:, 2], 3, "Дополнительная активность")
         cls.__visualize_info_column(data.iloc[:, 3], 4, "Часы сна")
         cls.__visualize_info_column(data.iloc[:, 4], 5, "Образцы вопросов, отработанных на практике")
         cls.__visualize_info_column(data.iloc[:, 5], 6, "Индекс производительности")
