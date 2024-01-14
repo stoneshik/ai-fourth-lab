@@ -15,6 +15,8 @@ class LinearRegression:
         self.y_matrix = y_matrix
         self.b_vector = self.__calc_b_vector()  # вектор с найденными коэффициентами
         self.y_fit = self.__fit()
+        self.epsilon = self.__calc_epsilon()  # вектор остатков
+        self.r_square = self.__calc_r_square()  # коэффициент детерминации
 
     def __calc_b_vector(self):
         x_transpose = np.transpose(self.x_matrix)
@@ -25,6 +27,15 @@ class LinearRegression:
         for num_row, x_row in enumerate(self.x_matrix):
             y_fit[num_row] = sum([x_value * self.b_vector[i] for i, x_value in enumerate(x_row)])
         return y_fit
+
+    def __calc_epsilon(self):
+        epsilon = np.zeros(len(self.y_matrix))
+        for i, y_value, y_value_fit in zip(range(len(self.y_matrix)), self.y_matrix, self.y_fit):
+            epsilon[i] = y_value - y_value_fit
+        return epsilon
+
+    def __calc_r_square(self):
+        return 1 - (self.epsilon.var() / self.y_matrix.var())
 
 
 def normalize_column(column):
@@ -63,6 +74,8 @@ def first(normalized_data):
     print("Для поиска значения индекса производительности")
     print(f"Вектор с найденными коэффициентами:\n{linear_regression.b_vector}")
     print(f"Найденные значения y:\n{linear_regression.y_fit}\n")
+    print(f"Найденные значения остатков:\n{linear_regression.epsilon}\n")
+    print(f"Найденные значения коэффициента детерминации:\n{linear_regression.r_square}\n")
 
 
 def second(normalized_data):
@@ -76,9 +89,11 @@ def second(normalized_data):
     y_matrix = normalized_data[:, 0]
     linear_regression = LinearRegression(x_matrix, y_matrix)
     print("Модель №2")
-    print("Для поиска значения часов учебы")
+    print("Для поиска значения индекса производительности")
     print(f"Вектор с найденными коэффициентами:\n{linear_regression.b_vector}")
     print(f"Найденные значения y:\n{linear_regression.y_fit}\n")
+    print(f"Найденные значения остатков:\n{linear_regression.epsilon}\n")
+    print(f"Найденные значения коэффициента детерминации:\n{linear_regression.r_square}\n")
 
 
 def third(normalized_data):
@@ -92,9 +107,11 @@ def third(normalized_data):
     y_matrix = normalized_data[:, 1]
     linear_regression = LinearRegression(x_matrix, y_matrix)
     print("Модель №3")
-    print("Для поиска значения предыдущей оценки")
+    print("Для поиска значения индекса производительности")
     print(f"Вектор с найденными коэффициентами:\n{linear_regression.b_vector}")
     print(f"Найденные значения y:\n{linear_regression.y_fit}\n")
+    print(f"Найденные значения остатков:\n{linear_regression.epsilon}\n")
+    print(f"Найденные значения коэффициента детерминации:\n{linear_regression.r_square}\n")
 
 
 def visualize_info_column(column, num_column, name_column):
