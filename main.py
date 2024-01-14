@@ -97,13 +97,34 @@ def third(normalized_data):
     print(f"Найденные значения y:\n{linear_regression.y_fit}\n")
 
 
+def visualize_info_column(column, num_column, name_column):
+    print(f"Информация о столбце №{num_column}: {name_column}")
+    print(f"Среднее значение: {column.mean()}")
+    print(f"Стандартное отклонение: {column.std()}")
+    print(f"Минимальное значение: {column.min()}")
+    print(f"Максимальное значение: {column.max()}")
+    print(f"Первый квантиль: {np.quantile(column, 0)}")
+    print(f"Второй квантиль: {np.quantile(column, 0.25)}")
+    print(f"Третий квантиль: {np.quantile(column, 0.50)}")
+    print(f"Четвертый квантиль: {np.quantile(column, 0.75)}")
+    print(f"Пятый квантиль: {np.quantile(column, 1)}")
+    print()
+
+
 def visualize_info_dataset(data):
     num_rows = len(data)
     num_columns = len(data.columns)
     print("Информация о датасете")
-    print("Содержит столбцы: Часов обучения; Предыдущая оценка; Дополнительная активность; Часы сна; Образцы вопросов, отработанных на практике; Индекс производительности")
+    print("Содержит столбцы: Часы обучения; Предыдущая оценка; Дополнительная активность; Часы сна; Образцы вопросов, отработанных на практике; Индекс производительности")
     print(f"Количество строк: {num_rows}")
-    print(f"Количество столбцов: {num_columns}")
+    print(f"Количество столбцов: {num_columns}\n")
+    visualize_info_column(data.iloc[:, 0], 1, "Часы обучения")
+    visualize_info_column(data.iloc[:, 1], 2, "Предыдущая оценка")
+    print(f"Информация о столбце №3: Дополнительная активность")
+    print("Значения принимают либо \"Yes\" либо \"No\"\n")
+    visualize_info_column(data.iloc[:, 3], 4, "Часы сна")
+    visualize_info_column(data.iloc[:, 4], 5, "Образцы вопросов, отработанных на практике")
+    visualize_info_column(data.iloc[:, 5], 6, "Индекс производительности")
     print()
 
 
