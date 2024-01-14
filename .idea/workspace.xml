@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="394af1ff-9398-4b38-ac1e-61aea8051f3e" name="Changes" comment="готовая лаба">
+    <list default="true" id="394af1ff-9398-4b38-ac1e-61aea8051f3e" name="Changes" comment="Добавил гистограммы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -38,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/sus/Рабочий стол/university/ai/labs/fourthLab",
+    "last_opened_file_path": "/home/sus/Рабочий стол/university/ai/labs/fifth",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,7 +90,7 @@
       <workItem from="1705175863407" duration="5043000" />
       <workItem from="1705224616943" duration="17965000" />
       <workItem from="1705244447659" duration="23000" />
-      <workItem from="1705251749406" duration="714000" />
+      <workItem from="1705251749406" duration="2258000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -148,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705243751369</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил гистограммы">
+      <option name="closed" value="true" />
+      <created>1705252533868</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705252533868</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,9 +170,10 @@
     <MESSAGE value="добавил вычисление коэффициента детерминации" />
     <MESSAGE value="набросал первую модель" />
     <MESSAGE value="готовая лаба" />
-    <option name="LAST_COMMIT_MESSAGE" value="готовая лаба" />
+    <MESSAGE value="Добавил гистограммы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил гистограммы" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fourthLab$main.coverage" NAME="main Coverage Results" MODIFIED="1705252446524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fourthLab$main.coverage" NAME="main Coverage Results" MODIFIED="1705254168371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
