@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 from models import FirstModel, SecondModel, ThirdModel
 
@@ -42,6 +43,9 @@ class VisualizeData:
         print(f"Четвертый квантиль: {np.quantile(column, 0.75)}")
         print(f"Пятый квантиль: {np.quantile(column, 1)}")
         print()
+        plt.hist(column, bins=15, edgecolor='black')
+        plt.title(name_column)
+        plt.show()
 
     @classmethod
     def visualize_info_dataset(cls, data):
