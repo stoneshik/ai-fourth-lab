@@ -33,7 +33,7 @@ class LinearRegression:
     def __calc_epsilon(self):
         epsilon = np.zeros(len(self.y_test))
         for i, y_value, y_value_fit in zip(range(len(self.y_test)), self.y_test, self.y_fit):
-            epsilon[i] = y_value - y_value_fit
+            epsilon[i] = abs(y_value - y_value_fit)
         return epsilon
 
     def __calc_r_square(self):
